@@ -1,3 +1,5 @@
+addpath('src/functions');
+
 s = 10;
 t = 20;
 
