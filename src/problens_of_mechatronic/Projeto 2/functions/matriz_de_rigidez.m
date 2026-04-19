@@ -1,6 +1,5 @@
 function [K, k] = matriz_de_rigidez(n, k_min, delta_k, b)
-    % Inicializa a matriz de rigidez
-    K = zeros(n, n);
+    K = zeros(n, n); % Inicializa a matriz de rigidez
     k = zeros(n, 1); % Inicializa a matriz de constantes elásticas
 
     for i = 1:n
