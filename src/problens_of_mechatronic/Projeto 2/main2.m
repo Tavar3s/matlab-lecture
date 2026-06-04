@@ -1,5 +1,5 @@
 clear all; clc
-addpath('src/problens_of_mechatronic/Projeto 2/functions'); % Adiciona o diretório 'funcoes' ao caminho do MATLAB
+addpath('src/problens_of_mechatronic/Projeto 2/functions'); % Adiciona o diretório das funções ao caminho do MATLAB
 
 % Condições iniciais
 k_min = 30000; % Constante elástica mínima (N/m)
@@ -32,27 +32,32 @@ deslocamento_2 = matriz_rigidez_2\matriz_forca_2; % Deslocamento calculado para 
 % Gráfico de deslocamento para o caso 1
 figure;
 plot(1:n_1, deslocamento_1, '*-', 'LineWidth', 2);
-title('Deslocamento - Caso 1');
+set(gca, 'FontSize', 14);
 xlabel('Posição');
 ylabel('Deslocamento');
+grid on;
 
 % Gráfico de deslocamento para o caso 2
 figure;
 plot(1:n_2, deslocamento_2, '*-', 'LineWidth', 2);
-title('Deslocamento - Caso 2');
+set(gca, 'FontSize', 14);
 xlabel('Posição');
 ylabel('Deslocamento');
+grid on;
 
 % Gráficos de constante elástica para o caso 1
 figure;
 plot(1:n_1, k_1, '*-', 'LineWidth', 2);
-title('Constante Elástica - Caso 1');
+set(gca, 'FontSize', 14);
 xlabel('Posição');
 ylabel('Constante Elástica');
+grid on;
 
 % Gráficos de constante elástica para o caso 2
 figure;
+grid on;
 plot(1:n_2, k_2, '*-', 'LineWidth', 2);
-title('Constante Elástica - Caso 2');
+set(gca, 'FontSize', 14);
 xlabel('Posição');
 ylabel('Constante Elástica');
+grid on;
